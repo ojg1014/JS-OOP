@@ -1,0 +1,59 @@
+function Person() {
+  this.name = 'kim',
+  this.first = 10,
+  this.second = 20,
+  this.third = 30,
+  this.sum = function () {
+    return this.first + this.second + this.third;
+  }
+}
+
+
+console.group();
+
+let kim = {
+  name: 'kim',
+  first: 10,
+  second: 20,
+  sum: function () {
+    return this.first + this.second;
+  }
+};
+
+let lee = {
+  name: 'lee',
+  first: 10,
+  second: 10,
+  sum: function () {
+    return this.first + this.second;
+  }
+};
+
+
+console.log("kim.sum() : ", kim.sum());
+console.log("lee.sum() : ", lee.sum());
+
+
+console.groupEnd();
+
+console.group();
+
+let day = new Date('2021-3-6');
+console.log(day.getFullYear());
+console.log(day.getMonth());
+console.log(day.getDay());
+
+
+console.log('date', Date);
+
+
+
+
+
+console.log("Person() : ", Person());
+// console.log("Person() : ", new Person());
+
+
+
+
+console.groupEnd();
